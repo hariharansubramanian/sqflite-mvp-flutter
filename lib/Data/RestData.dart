@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:sqflite_mvp/Model/User.dart';
 import 'package:sqflite_mvp/Utils/NetworkUtils.dart';
 
 class RestData {
@@ -8,7 +9,6 @@ class RestData {
   static final LOGIN_URL = BASE_URl + "/";
 
   Future<User> login(String username, String password) {
-    //TODO: implement login
-    return null;
+    return new Future.value(new User(username, password));
   }
 }
